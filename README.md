@@ -14,7 +14,7 @@ Research code for spoofing-robust automatic speaker verification using time-doma
 
 ## Overview
 
-This repository is a notebook-driven research workspace for spoofing-robust speaker verification on the ASVspoof2019 Logical Access setting. It studies time-domain embeddings for countermeasure (CM) models, gender-aware evaluation, and ASV robustness.
+This repository is a notebook-driven research workspace for spoofing-robust speaker verification on the ASVspoof2019 Logical Access database. It studies time-domain embeddings for countermeasure (CM) models, automatic speaker verification (ASV), and evaluation.
 
 Main experiment themes:
 
@@ -32,15 +32,14 @@ Main experiment themes:
 | `ASV_utils/` | `.py` | ASV/CM helpers for enrollment handling, ECAPA-TDNN scoring, CM inference, data loading, DCF/t-DCF support, and thresholds. |
 | `utils/` | `.py` | Shared training utilities, PyTorch datasets, losses, EER/DET metrics, plotting helpers, early stopping, and confidence intervals. |
 | `Data/` | `.mat`, `.txt` | Processed time-domain embedding datasets and labels for `pmf_both` CM models and male-vs-female models database experiments. |
-| `Deep_Learning_Codes/` | `.ipynb`, `.png`, `.py`, `.pkl` | Deep learning CM experiments, best-model notebooks, fixed-order runs, plots, attack-wise EER, and confidence intervals. |
-| `ML/` | `.ipynb`, `.py`, `.pkl` | Classical ML baselines, spoofed-vs-genuine EER experiments, gender classification, and histogram analysis. 
+| `Deep_Learning_Codes/` | `.ipynb`, `.png`, `.py`, `.pkl` | Deep learning CM experiments, best-model notebooks, fixed-order runs, plots, attack-wise EER, and confidence intervals results. |
+| `ML/` | `.ipynb`, `.py`, `.pkl` | Classical ML algorithms for: spoofed-vs-genuine EER experiments, gender classification, and histogram analysis. |
 | `DCF/` | `.ipynb`, `.png`, `.pkl` | ECAPA-TDNN DCF notebooks, DCF figures, and combined ASV/CM t-DCF experiments. |
 | `tDCF/` | `.ipynb`, `.pkl` | Total t-DCF and weighted EER notebooks. |
 | `aDCF/` | `.ipynb`, `.py`, `.cfg` | a-DCF notebooks, fixed-order a-DCF/t-DCF analysis. |
 | `time_embeddings_scores/` | `.csv` | Fixed-order train/dev/eval score files for male and female time-domain CM systems. |
 | `Villalization_DM/` | `.ipynb`, `.png`, `.txt` | Visualization notebooks and figures for t-SNE, UMAP, density, gender, attack, and correlation analysis. |
 | Repository root | `.md`, `.gitignore`, `LICENSE` | README, ignore rules, and MIT license. |
-
 
 ## Important Files
 
@@ -74,11 +73,19 @@ Fixed-order score CSVs are stored under:
 - `time_embeddings_scores/fixed_order/male/`
 - `time_embeddings_scores/fixed_order/female/`
 
+together they are the gender-dependent CM system.
+
 CSV columns:
 
 ```text
 scores,labels,files
 ```
+
+## Important Links
+
+- **UMAP experiments data** (PMF-based embeddings of ASVspoof2019, gender and spoof/bonafide histograms, CM models based on PMF-based embeddings of spoof/bonafide histograms): [download the required zip files from Google Drive](https://drive.google.com/drive/folders/1udhCQOVr0SORGdQBCswUOiKdk-sqS4IC?usp=sharing)
+- **Evaluation metrics only**: [GitHub — Evaluation-Measures-Audio-Deepfake-Detection](https://github.com/avishai111/Evaluation-Measures-Audio-Deepfake-Detection)
+- **ECAPA-TDNN network**: [Hugging Face — speechbrain/spkrec-ecapa-voxceleb](https://huggingface.co/speechbrain/spkrec-ecapa-voxceleb)
 
 ## Main Experiment Areas
 
@@ -137,7 +144,6 @@ pip install speechbrain mlflow soundfile openpyxl joblib
 pip install umap-learn pacmap
 ```
 
-
 ## Reproducibility Notes
 
 - This is a research workspace, not a packaged Python library.
@@ -152,10 +158,7 @@ This project is released under the MIT License. See `LICENSE` for details.
 
 If you have questions, issues, or want to collaborate, feel free to reach out:
 
- 📧 Email: [Avishai Weizman](mailto:wavishay@post.bgu.ac.il)  
-
- 🔗 GitHub: [github.com/avishai111](https://github.com/avishai111)
-
- 🎓 Google Scholar: [Avishai Weizman](https://scholar.google.com/citations?hl=iw&user=vWlnVpUAAAAJ)  
- 
- 💼 LinkedIn: [linkedin.com/in/avishai-weizman/](https://www.linkedin.com/in/avishai-weizman/)
+- 📧 Email: [Avishai Weizman](mailto:wavishay@post.bgu.ac.il)
+- 🔗 GitHub: [github.com/avishai111](https://github.com/avishai111)
+- 🎓 Google Scholar: [Avishai Weizman](https://scholar.google.com/citations?hl=iw&user=vWlnVpUAAAAJ)
+- 💼 LinkedIn: [linkedin.com/in/avishai-weizman/](https://www.linkedin.com/in/avishai-weizman/)
