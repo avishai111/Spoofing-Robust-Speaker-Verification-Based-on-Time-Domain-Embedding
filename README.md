@@ -160,5 +160,4 @@ If you have questions, issues, or want to collaborate, feel free to reach out:
 
 - 📧 Email: [Avishai Weizman](mailto:wavishay@post.bgu.ac.il)
 - 🔗 GitHub: [github.com/avishai111](https://github.com/avishai111)
-- 🎓 Google Scholar: [Avishai Weizman](https://scholar.google.com/citations?hl=iw&user=vWlnVpUAAAAJ)
 - 💼 LinkedIn: [linkedin.com/in/avishai-weizman/](https://www.linkedin.com/in/avishai-weizman/)
